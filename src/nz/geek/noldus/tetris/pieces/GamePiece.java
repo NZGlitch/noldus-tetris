@@ -83,7 +83,7 @@ public abstract class GamePiece {
 
     public synchronized void rotate(GameCanvas canvas) {
 
-        ORIENTATION newO = ORIENTATION.values()[((orientation.ordinal()+1)%4)];
+        ORIENTATION newO = ORIENTATION.values()[((orientation.ordinal()+5)%4)];
         for (Point p : tilePositions(newO, x, y)) {
             if (!canvas.pointEmpty(p)) return;
         }
